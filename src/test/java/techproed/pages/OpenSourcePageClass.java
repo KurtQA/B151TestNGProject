@@ -2,7 +2,7 @@ package techproed.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utilities.Driver;
+import techproed.utilities.Driver;
 
 
 public class OpenSourcePageClass {

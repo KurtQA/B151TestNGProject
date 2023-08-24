@@ -3,7 +3,7 @@ package techproed.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.Driver;
+import techproed.utilities.Driver;
 
 
 public class TechproTestCenterPage {
@@ -24,9 +24,13 @@ public class TechproTestCenterPage {
     public WebElement girisVerify;
 
     @FindBy(xpath = "//a//i")
-    public WebElement logoutButton; //Logout yazisinin locate'ini aldik. a ve i taglari ile locate aldik. Bu locate'i aldiktan sonra C03_Page classinda bu logOut'a click yaptik
+    public WebElement logoutButton; //Logout yazisinin locate'ini aldik. a ve i taglari ile locate aldik. Bu locate'i aldiktan sonra C03_Page classinda bu logOut'a click yaptik.
+    //Bir yerde logout dogrudan gorunmuyorsa profile uzerine gelip click yapinca logout secenekler arasinda gorunebilir ve sadece o secenek uzerine gelip inspect yapariz. Ancak
+    //once profile#in locate'ini aliriz ve ona click yapinca logout goruldugunden locate'ini aldigimiz profile'a click methodunu ekleriz. Daha sonra logout locate'i ve ona da
+    //click methodu ekleyerek logout islemini gerceklestirmis oluruz.
 
     @FindBy(xpath = "//h2")
-    public WebElement logoutVerify;
+    public WebElement logoutVerify; //We check the url on the top. if Url has /auth/ keyword, it means logout is successful. We can locate this url with 'auth' keyword
+    //We can assert that as follows: Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("auth"));
 
 }

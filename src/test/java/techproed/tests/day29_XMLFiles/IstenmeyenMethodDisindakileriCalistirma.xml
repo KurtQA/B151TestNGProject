@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Istenmeyen Method Disindakileri Calistirma">
+        <classes>
+            <class name="techproed.tests.day25_POM.C01_DriverTest">
+                <methods>
+                    <exclude name="test04"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+<!-- Bir tane class'imiz var ve icinde 100 tane methodumuz var diyelim.
+Bu methodlardan calsitirmak istemediginiz methodu <exclude> tagi ile devre disi birakip diger methodlari calistirabilirsiniz-->
